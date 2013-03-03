@@ -1,0 +1,25 @@
+# What is it?
+
+This is an XCode plug-in that adds TextMate's command-return behavior to XCode.  press command-return at any time and a newline will be added to the end of the current line and your insertion point will move to the next line.
+
+This is especially handy when you are chaninging some value in the middle of a line of code before going on to the next line
+
+As an added bonus, there's also 
+
+
+# Installation
+
+1. Open the project and build the plug-in.
+2. After a successful build the plug-in should automatically be installed; to install it manually move the product (`XcodeSmartReturn.pbplugin`) to `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins` (create the directory if necessary).
+3. Restart Xcode.
+4. You will need to set up the key keybindings yourself. Open XCode preferences, choose the "Key Bindings" tab, and look for a new menu item in the Edit Menu labeled "Insert newline at end of line".  Set its key equivalent to command-return.
+
+# Usage
+
+When editing any file, type command-return to add a newline at the end of the current line.
+
+# Credit
+
+This plugin was inspired by Ciarán Walsh's [XCodeBracketMatcher](http://github.com/ciaran/xcode-bracket-matcher/) which adds another excellent TextMate feature to XCode.
+
+Last updated: 

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'XCode Smart Return' target in the 'XCode Smart Return' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
