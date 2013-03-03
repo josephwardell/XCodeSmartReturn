@@ -13,9 +13,5 @@
 
 @interface OJWSmartReturnPlugin : NSObject {
 	
-//	NSTextView *_textView;
 }
-
-//@property (nonatomic, retain) NSTextView *textView;
-
 @end

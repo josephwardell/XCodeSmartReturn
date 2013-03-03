@@ -12,8 +12,6 @@
 
 @implementation OJWSmartReturnPlugin
 
-//@synthesize textView = _textView;
-
 #pragma mark - Plugin Initialization
 
 + (void)pluginDidLoad:(NSBundle *)plugin
@@ -180,17 +178,17 @@
 	if (editMenuItem) {
 		[[editMenuItem submenu] addItem:[NSMenuItem separatorItem]];
 		
-        NSMenuItem* insReturnMenuItem = [[NSMenuItem alloc] initWithTitle:@"Insert Return at end of Line" action:@selector(insertReturnAtEndOfLine:) keyEquivalent:@"\n"];
+        NSMenuItem* insReturnMenuItem = [[[NSMenuItem alloc] initWithTitle:@"Insert Return at end of Line" action:@selector(insertReturnAtEndOfLine:) keyEquivalent:@"\n"] autorelease];
         [insReturnMenuItem setTarget:self];
         [insReturnMenuItem setKeyEquivalentModifierMask:NSCommandKeyMask];
         [[editMenuItem submenu] addItem:insReturnMenuItem];
 
-        NSMenuItem* insSCMenuItem = [[NSMenuItem alloc] initWithTitle:@"Insert ; at end of Line" action:@selector(insertSemicoloAtEndOfLine:) keyEquivalent:@";"] ;
+        NSMenuItem* insSCMenuItem = [[[NSMenuItem alloc] initWithTitle:@"Insert ; at end of Line" action:@selector(insertSemicoloAtEndOfLine:) keyEquivalent:@";"] autorelease];
         [insSCMenuItem setTarget:self];
         [insSCMenuItem setKeyEquivalentModifierMask:NSCommandKeyMask];
         [[editMenuItem submenu] addItem:insSCMenuItem];
 
-#if 1
+#if INCLUDEDATEMENUITEM
 		[[editMenuItem submenu] addItem:[NSMenuItem separatorItem]];
 
         NSMenuItem* insDateMenuItem = [[[NSMenuItem alloc] initWithTitle:@"Insert Date" action:@selector(insertDate:) keyEquivalent:@"D"] autorelease];
@@ -205,7 +203,8 @@
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem
 {
     if (([menuItem action] == @selector(insertReturnAtEndOfLine:)) ||
-        ([menuItem action] == @selector(insertSemicoloAtEndOfLine:)))
+        ([menuItem action] == @selector(insertSemicoloAtEndOfLine:)) ||
+        ([menuItem action] == @selector(insertDate:)))
     {
 
 		NSResponder *firstResponder = [[NSApp keyWindow] firstResponder];
@@ -221,8 +220,7 @@
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-//	[_textView release];
-//	[super dealloc];
+	[super dealloc];
 }
 
 @end

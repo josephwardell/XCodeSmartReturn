@@ -4,7 +4,7 @@ This is an XCode plug-in that adds TextMate's command-return behavior to XCode. 
 
 This is especially handy when you are chaninging some value in the middle of a line of code before going on to the next line
 
-As an added bonus, there's also 
+As an added bonus, there's also a command to insert a semicolon at the end of the current line.
 
 
 # Installation
@@ -12,7 +12,7 @@ As an added bonus, there's also
 1. Open the project and build the plug-in.
 2. After a successful build the plug-in should automatically be installed; to install it manually move the product (`XcodeSmartReturn.pbplugin`) to `~/Library/Application Support/Developer/Shared/Xcode/Plug-ins` (create the directory if necessary).
 3. Restart Xcode.
-4. You will need to set up the key keybindings yourself. Open XCode preferences, choose the "Key Bindings" tab, and look for a new menu item in the Edit Menu labeled "Insert newline at end of line".  Set its key equivalent to command-return.
+4. You may need to adjust XCode's key bindings settigns to get key bindings on the menu items provided. Open XCode preferences, choose the "Key Bindings" tab, and look for any menu items that are mapped to command-return or command-;. O course, you can also change the key bindings in the source code as well.
 
 # Usage
 
@@ -20,6 +20,5 @@ When editing any file, type command-return to add a newline at the end of the cu
 
 # Credit
 
-This plugin was inspired by Ciarán Walsh's [XCodeBracketMatcher](http://github.com/ciaran/xcode-bracket-matcher/) which adds another excellent TextMate feature to XCode.
+This plugin was inspired by Ciarán Walsh's [XCodeBracketMatcher](http://github.com/ciaran/xcode-bracket-matcher/) which adds another excellent TextMate feature to XCode and Ole Zorn for a great XCode plugin example in [OMColorSense](https://github.com/omz/ColorSense-for-Xcode/blob/master/OMColorSense.xcodeproj/project.pbxproj)
 
-Last updated: 
