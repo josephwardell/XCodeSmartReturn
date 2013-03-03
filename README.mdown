@@ -20,5 +20,5 @@ When editing any file, type command-return to add a newline at the end of the cu
 
 # Credit
 
-This plugin was inspired by Ciarán Walsh's [XCodeBracketMatcher](http://github.com/ciaran/xcode-bracket-matcher/) which adds another excellent TextMate feature to XCode and Ole Zorn for a great XCode plugin example in [OMColorSense](https://github.com/omz/ColorSense-for-Xcode/blob/master/OMColorSense.xcodeproj/project.pbxproj)
+This plugin was inspired by Ciarán Walsh's [XCodeBracketMatcher](http://github.com/ciaran/xcode-bracket-matcher/) and Ole Zorn's great XCode plugin example in [OMColorSense](https://github.com/omz/ColorSense-for-Xcode/blob/master/OMColorSense.xcodeproj/project.pbxproj)
 
